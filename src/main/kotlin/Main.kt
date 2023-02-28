@@ -6,6 +6,7 @@ fun main() {
     val player2 = Player(namaPemain2)
 
 
+
     println("==========================")
     println("GAME SUIT TERMINAL VERSION")
     println("==========================")

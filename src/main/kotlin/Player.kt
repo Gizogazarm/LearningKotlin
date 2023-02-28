@@ -1,6 +1,6 @@
-class Player(namaPemain: String) {
+class Player:Suit() {
     private var status = false
-    private val namaPlayer = namaPemain
+    private var namaPlayer: String? = ""
 
     fun statusPemain() {
         if (this.status == true) {
@@ -10,7 +10,11 @@ class Player(namaPemain: String) {
         }
     }
 
-    fun getName(): String {
+    fun setName(namaPemain: String) {
+        this.namaPlayer = namaPemain
+    }
+
+    fun getName(): String? {
         return this.namaPlayer
     }
 }
