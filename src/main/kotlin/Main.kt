@@ -11,6 +11,7 @@ fun main() {
     println("==========================")
     println("GAME SUIT TERMINAL VERSION")
     println("==========================")
+    println("Pilihan Suit : Gunting, Batu , Kertas")
     println("1. Masukkan ${player1.getName()} :")
     val inputanPemain1 = readLine()?.lowercase()!!
     player1.tesSuit(player1.useSuit(inputanPemain1,suit))
