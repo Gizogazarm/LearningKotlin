@@ -1,7 +1,7 @@
 open class Suit {
 
     private val salah = "Mohon maaf ulangi dengan benar"
-    private var nilai = false
+    protected var nilai = false
     private var dataSuit: String? = ""
 
     fun useSuit(jurusUser: String, suit: Array<String>):Boolean {
@@ -18,9 +18,7 @@ open class Suit {
     }
 
     fun tesSuit(statusSuit: Boolean) {
-        if(statusSuit == true) {
-            println(dataSuit)
-        } else {
+        if(statusSuit == false) {
             println(salah)
         }
     }

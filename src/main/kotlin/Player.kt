@@ -2,6 +2,10 @@ class Player:Suit() {
     private var status = false
     private var namaPlayer: String? = ""
 
+    fun nilaiAwalPlayer(): Boolean {
+        return nilai
+    }
+
     fun statusPemain() {
         if (this.status == true) {
             println("Pemain $namaPlayer MENANG !!")
