@@ -1,4 +1,4 @@
-class Player():Suit() {
+class Player:Suit() {
     private var status = false
     private var namaPlayer: String? = ""
 
@@ -12,5 +12,13 @@ class Player():Suit() {
 
     fun getName(): String? {
         return this.namaPlayer
+    }
+
+    fun statusMenang (status: Boolean): Boolean {
+        when(status) {
+            true -> this.status = true
+            else -> this.status = false
+        }
+        return this.status
     }
 }
