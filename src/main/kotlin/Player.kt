@@ -1,8 +1,8 @@
 class Player:Suit() {
-    private var status = false
+    private var statusPlayer = false
     private var namaPlayer: String? = ""
 
-    fun nilaiAwalPlayer(): Boolean {
+    fun kondisiSuit(): Boolean {
         return nilai
     }
 
@@ -16,9 +16,9 @@ class Player:Suit() {
 
     fun statusMenang (status: Boolean): Boolean {
         when(status) {
-            true -> this.status = true
-            else -> this.status = false
+            true -> this.statusPlayer = true
+            else -> this.statusPlayer = false
         }
-        return this.status
+        return this.statusPlayer
     }
 }
