@@ -24,4 +24,6 @@ fun main() {
         player2.tesSuit(player2.useSuit(inputanPemain2, suit))
     }
 
+
+
 }

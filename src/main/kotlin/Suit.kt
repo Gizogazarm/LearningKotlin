@@ -1,11 +1,11 @@
-@Suppress("UNREACHABLE_CODE")
-open class Suit: Hasil() {
+
+open class Suit : Hasil() {
 
     private val salah = "Mohon maaf ulangi dengan benar"
     protected var nilai = false
     private var dataSuit: String? = ""
 
-    fun useSuit(jurusUser: String, suit: Array<String>):Boolean {
+    fun useSuit(jurusUser: String, suit: Array<String>): Boolean {
         for (i in 0 until suit.size) {
             if (jurusUser == suit[i]) {
                 dataSuit = jurusUser
@@ -19,23 +19,23 @@ open class Suit: Hasil() {
     }
 
     fun tesSuit(statusSuit: Boolean) {
-        if(statusSuit == false) {
+        if (statusSuit == false) {
             println(salah)
         }
     }
 
-    fun getStatusSuit():String?{
+    fun getStatusSuit(): String? {
         return dataSuit
     }
 
-    override fun hasilSuit(suit1: Boolean, suit2: Boolean) {
-        TODO("Not yet implemented")
-        if(suit1 == true && suit2 == false) {
-            saveMenang = statusMenang[0]
-        } else if (suit1 == false && suit2 == true) {
-            saveMenang = statusMenang[1]
+    override fun hasilSuit(pemain1: Boolean, pemain2: Boolean) {
+
+        if (pemain1 == true && pemain2 == false) {
+            print(statusMenang[0])
+        } else if (pemain1 == false && pemain2 == true) {
+            print(statusMenang[1])
         } else {
-            saveMenang = statusMenang[2]
+            print(statusMenang[2])
         }
 
     }
