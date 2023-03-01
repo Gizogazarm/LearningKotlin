@@ -5,6 +5,7 @@ fun main() {
     val namaPemain2 = "Pemain 2"
     val player1 = Player()
     val player2 = Player()
+    val hasil = Suit()
     player1.setName(namaPemain1)
     player2.setName(namaPemain2)
 
@@ -18,11 +19,18 @@ fun main() {
         player1.tesSuit(player1.useSuit(inputanPemain1, suit))
     }
 
+    var dataSuit1 = player1.getStatusSuit()
+
     while (player2.nilaiAwalPlayer() == false) {
         println("2. Masukkan ${player2.getName()} :")
         val inputanPemain2 = readLine()?.lowercase()!!
         player2.tesSuit(player2.useSuit(inputanPemain2, suit))
     }
+
+    var datasuit2 = player2.getStatusSuit()
+
+    print("Hasil :")
+    hasil.hasilSuit(true,false)
 
 
 
