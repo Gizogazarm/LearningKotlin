@@ -3,7 +3,7 @@ class Player:Suit() {
     private var namaPlayer: String? = ""
 
     fun kondisiSuit(): Boolean {
-        return nilai
+        return nilaiKondisiSuit
     }
 
     fun setName(namaPemain: String) {

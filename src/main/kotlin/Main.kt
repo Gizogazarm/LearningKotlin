@@ -19,7 +19,6 @@ fun main() {
         player1.tesSuit(player1.useSuit(inputanPemain1, suit))
     }
 
-    var dataSuit1 = player1.getStatusSuit()
 
     while (player2.kondisiSuit() == false) {
         println("2. Masukkan ${player2.getName()} :")
@@ -27,10 +26,11 @@ fun main() {
         player2.tesSuit(player2.useSuit(inputanPemain2, suit))
     }
 
-    var datasuit2 = player2.getStatusSuit()
+    val dataSuit1 = player1.getStatusSuit()
+    val dataSuit2 = player2.getStatusSuit()
 
 
     print("Hasil :")
-    hasil.hasilSuit(true,false)
+    hasil.hasilSuit(player1.statusMenang(player1.tarungSuit(dataSuit2)), player2.statusMenang(player2.tarungSuit(dataSuit1)))
 
 }
