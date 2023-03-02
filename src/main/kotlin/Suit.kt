@@ -49,11 +49,11 @@ open class Suit : Hasil() {
     override fun hasilSuit(pemain1: Boolean, pemain2: Boolean) {
 
         if (pemain1 == true && pemain2 == false) {
-            print(statusMenang[0])
+            println(statusMenang[0])
         } else if (pemain1 == false && pemain2 == true) {
-            print(statusMenang[1])
+            println(statusMenang[1])
         } else {
-            print(statusMenang[2])
+            println(statusMenang[2])
         }
 
     }

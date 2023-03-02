@@ -6,6 +6,10 @@ class Player:Suit() {
         return nilaiKondisiSuit
     }
 
+    fun setKondisiSuit(setNilai:Boolean) {
+        nilaiKondisiSuit = setNilai
+    }
+
     fun setName(namaPemain: String) {
         this.namaPlayer = namaPemain
     }
