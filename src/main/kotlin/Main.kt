@@ -8,6 +8,7 @@ fun main() {
     val player2 = Player()
     val hasil = Suit()
     var mainLagi = true
+    var ulang = false
     player1.setName(namaPemain1)
     player2.setName(namaPemain2)
 
@@ -16,6 +17,10 @@ fun main() {
         println("==========================")
         println("GAME SUIT TERMINAL VERSION")
         println("==========================")
+
+        if (ulang == true) {
+            ulang = false
+        }
 
         while (player1.kondisiSuit() == false) {
             println("1. Masukkan ${player1.getName()} :")
@@ -41,22 +46,27 @@ fun main() {
         print("Hasil :")
         hasil.hasilSuit(player1.statusMenang(player1.tarungSuit(dataSuit2)), player2.statusMenang(player2.tarungSuit(dataSuit1)))
 
-        println("Mau main lagi ? (Y/N) :")
+        while (ulang == false) {
+            println("Mau main lagi ? (Y/N) :")
 
-        when (readLine()?.lowercase()!!) {
-            "y" -> {
-                player1.setKondisiSuit(setNilai = false)
-                player2.setKondisiSuit(setNilai = false)
-            }
-            "n" -> {
-                mainLagi = false
-            }
-            else -> {
-                println("Pilihan tidak dimengerti")
+            when (readLine()?.lowercase()!!) {
+                "y" -> {
+                    player1.setKondisiSuit(setNilai = false)
+                    player2.setKondisiSuit(setNilai = false)
+                    ulang = true
+                }
+                "n" -> {
+                    mainLagi = false
+                    ulang = true
+                }
+                else -> {
+                    println("PILIHAN TIDAK DIMENGERTI !!!!")
+                    ulang = false
+                }
             }
         }
 
 
     } while (mainLagi == true)
-
 }
+
