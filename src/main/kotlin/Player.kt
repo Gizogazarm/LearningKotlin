@@ -1,6 +1,5 @@
-class Player:Suit() {
+class Player(private val namaPemain: String):Suit() {
     private var statusPlayer = false
-    private var namaPlayer: String? = ""
 
     fun kondisiSuit(): Boolean {
         return nilaiKondisiSuit
@@ -10,12 +9,8 @@ class Player:Suit() {
         nilaiKondisiSuit = setNilai
     }
 
-    fun setName(namaPemain: String) {
-        this.namaPlayer = namaPemain
-    }
-
-    fun getName(): String? {
-        return this.namaPlayer
+    fun getName(): String {
+        return this.namaPemain
     }
 
     fun statusMenang (status: Boolean): Boolean {

@@ -2,15 +2,12 @@ fun main() {
 
     val suit = arrayOf("gunting", "batu", "kertas")
     val penjelasan = "Pilihan Suit : Gunting, Batu , Kertas ( Masukkan huruf dengan benar tanpa spasi)"
-    val namaPemain1 = "Pemain 1"
-    val namaPemain2 = "Pemain 2"
-    val player1 = Player()
-    val player2 = Player()
+    val player1 = Player("Pemain 1")
+    val player2 = Player("Pemain 2")
     val hasil = Suit()
     var mainLagi = true
     var ulang = false
-    player1.setName(namaPemain1)
-    player2.setName(namaPemain2)
+
 
 
     do {
